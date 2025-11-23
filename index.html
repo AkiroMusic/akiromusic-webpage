@@ -1,0 +1,478 @@
+﻿<!doctype html>
+<html class="no-js" lang="en">
+    <head>
+        <!-- 页面元信息 -->
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta charset="utf-8">
+        <title>AkiroMusic - Music Producer</title>
+        
+        <!-- 响应式视口设置 -->
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1, user-scalable=0">
+        
+        <!-- 样式表引入 -->
+        <link rel="stylesheet" href="./css/normalize.css">        
+        <link rel="stylesheet" href="./css/pageloader.css">
+        <link rel="stylesheet" href="./fonts/opensans/stylesheet.css">
+        <link rel="stylesheet" href="./fonts/asap/stylesheet.css">
+        <link rel="stylesheet" href="https://cdn.bootcss.com/ionicons/1.5.2/css/ionicons.min.css">
+        <link rel="stylesheet" href="./css/foundation.min.css">
+        <link rel="stylesheet" href="./js/vendor/jquery.fullPage.css">
+        <link rel="stylesheet" href="./js/vegas/vegas.min.css">
+        <link rel="stylesheet" href="./css/main.css">
+        <link rel="stylesheet" href="./css/main_responsive.css">
+        <link rel="stylesheet" href="./css/style-font1.css">
+        
+        <!-- 现代浏览器特性检测 -->
+        <script src="./js/vendor/modernizr-2.7.1.min.js"></script>
+        
+        <!-- 自定义样式 - 毛玻璃效果优化 -->
+        <style type="text/css">
+            /* 自定义鼠标指针样式 */
+            body{cursor:url(https://hexo-1251213061.cos.ap-beijing.myqcloud.com/x/dorcandy.cur),default;}
+            a:hover{cursor:url(https://hexo-1251213061.cos.ap-beijing.myqcloud.com/x/pointer.cur),pointer;}
+            
+            /* 调整首页背景图亮度 */
+            .page-cover .bg-img {
+                filter: brightness(0.7);
+            }
+            
+            /* 毛玻璃效果样式 */
+            .glass-effect {
+                background: rgba(255, 255, 255, 0.05);  /* 透明度 */
+                backdrop-filter: blur(7px);             /* 模糊度 */
+                -webkit-backdrop-filter: blur(7px);      /* Webkit前缀 */
+                border-radius: 12px;                     /* 圆角 */
+                border: 1px solid rgba(255, 255, 255, 0.1); /* 边框透明度 */
+                padding: 15px;                           /* 内边距 */
+                box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25); /* 阴影 */
+            }
+            
+            /* 为内容区域添加毛玻璃效果 - 排除第一页 */
+            .page-when .content,
+            .page-register .content,
+            .page-about .content,
+            .page-contact .content {
+                background: rgba(255, 255, 255, 0.04);   /* 透明度 */
+                backdrop-filter: blur(6px);              /* 模糊度 */
+                -webkit-backdrop-filter: blur(6px);     /* Webkit前缀 */
+                border-radius: 15px;                     /* 圆角 */
+                border: 1px solid rgba(255, 255, 255, 0.08); /* 边框透明度 */
+                padding: 20px;                           /* 内边距 */
+                margin: 15px;                            /* 外边距 */
+                box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3); /* 阴影 */
+            }
+            
+            /* 增强文字可读性 */
+            .content h1, .content h2, .content h3, .content h4,
+            .content p, .content span, .content a {
+                text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6); /* 文字阴影 */
+            }
+            
+            /* 链接悬停效果 */
+            .content a:hover {
+                text-shadow: 0 1px 6px rgba(255, 255, 255, 0.4); /* 悬停阴影 */
+                transition: text-shadow 0.3s ease;
+            }
+            
+            /* 标题特殊效果 */
+            .p-title h3 {
+                background: rgba(255, 215, 0, 0.15);     /* 背景透明度 */
+                backdrop-filter: blur(5px);              /* 模糊度 */
+                -webkit-backdrop-filter: blur(5px);     /* Webkit前缀 */
+                border-radius: 8px;                     /* 圆角 */
+                padding: 8px 16px;                      /* 内边距 */
+                display: inline-block;
+                border: 1px solid rgba(255, 215, 0, 0.2); /* 边框透明度 */
+            }
+        </style>
+    </head>
+    
+
+
+    <body id="menu" class="alt-bg">
+        <!-- 旧版浏览器兼容性提示 -->
+        <!--[if lt IE 8]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <!-- 页面加载器 -->
+        <div class="page-loader" id="page-loader">
+            <div>
+                <i class="ion ion-loading-d"></i>
+                <p>Welcome to My Music World</p>
+            </div>
+        </div>
+
+        <!-- 顶部导航栏 -->
+        <header class="header-top">
+            <div class="logo">
+                <a href="#home">
+                    <img src="http://q1.qlogo.cn/g?b=qq&nk=1284969540&s=100" alt="AkiroMusic Logo">
+                </a>
+            </div>
+            <div class="menu clearfix">
+                <a href="https://m.bilibili.com/space/412877576" target="_blank">
+                    <span style="color:#FFD700;">Bilibili</span>
+                </a>
+                <a href="https://music.163.com/#/artist?id=47966143" target="_blank">
+                    <span style="color:#FFD700;">NetEase Cloud Music</span>
+                </a>
+                <a href="#contact">Contact</a>
+            </div>
+        </header>
+
+        <!-- 左侧快速导航菜单 -->
+        <nav class="quick-link count-6 nav-left">
+            <ul id="qmenu">
+                <li data-menuanchor="home">
+                    <a href="#home">🎪</a>
+                    <span class="title">Home</span>
+                </li>
+                <li data-menuanchor="when">
+                    <a href="#when">🍰</a>
+                    <span class="title">Birthday</span>
+                </li>
+                <li data-menuanchor="register">
+                    <a href="#register">🌏</a>
+                    <span class="title">Music Links</span>
+                </li>
+                <li data-menuanchor="about-us">
+                    <a href="#about-us">👒</a>
+                    <span class="title">About</span>
+                </li>
+                <li data-menuanchor="contact">
+                    <a href="#contact">📧</a>
+                    <span class="title">Contact</span>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- 首页背景区域 -->
+        <div class="page-cover" id="home">
+            <!-- 静态背景图片 -->
+            <div class="cover-bg pos-abs full-size bg-img" data-image-src="https://imgs.aixifan.com/live/1495974356790/1495974356790.jpg"></div>
+
+            <!-- 幻灯片背景轮播 -->
+            <div class="cover-bg pos-abs full-size slide-show">
+                <i class='img' data-src='https://imgs.aixifan.com/live/1495974355466/1495974355466.jpg'></i>
+                <i class='img' data-src='https://imgs.aixifan.com/live/1495974500801/1495974500801.jpg'></i>
+                <i class='img' data-src='https://imgs.aixifan.com/live/1495974356790/1495974356790.jpg'></i>
+                <i class='img' data-src='https://imgs.aixifan.com/live/1495974367777/1495974367777.jpg'></i>
+                <i class='img' data-src='https://imgs.aixifan.com/live/1495974498292/1495974498292.jpg'></i>
+                <i class='img' data-src='https://imgs.aixifan.com/live/1495974351291/1495974351291.jpg'></i>
+                <i class='img' data-src='https://imgs.aixifan.com/live/1495974370919/1495974370919.jpg'></i>
+                <i class='img' data-src='https://imgs.aixifan.com/live/1495974462151/1495974462151.jpg'></i>
+                <i class='img' data-src='https://imgs.aixifan.com/live/1495974467947/1495974467947.jpg'></i>
+            </div>
+            
+            <!-- 背景颜色叠加层 -->
+            <div class="cover-bg pos-abs full-size bg-color" data-bgcolor="rgba(51, 2, 48, 0.12)"></div>
+        </div>
+        
+        <!-- 主内容区域 -->
+        <main class="page-main" id="mainpage">             
+            
+            <!-- 首页内容区域 - 不应用毛玻璃效果 -->
+            <div class="section page-home page page-cent" id="s-home">
+                <div class="logo-container">
+                    <img class="h-logo" src="http://q1.qlogo.cn/g?b=qq&nk=1284969540&s=100" alt="AkiroMusic">
+                </div>
+                <section class="content">
+                    <header class="header">
+                        <div class="h-left">
+                            <!-- 主页标题 -->
+                            <h2 title="Click here~">
+                                <a href="#/">
+                                    <span style="color:#FFFFFF;">Akiro</span>
+                                    <strong><span style="color:#FFFFFF;">Music</span></strong>
+                                </a>
+                            </h2>
+                        </div>
+                        <div class="h-right">
+                            <h3>Creating<br>Musical Moments</h3>
+                            <h4 class="subhead">
+                                <a href="#when">Feel the Rhythm & Love the Beat！</a>
+                            </h4>
+                        </div>
+                    </header>
+                </section>
+                <footer class="p-footer p-scrolldown">
+                    <a href="#when">
+                        <div class="arrow-d">
+                            <div class="before">Ready to</div>
+                            <div class="after">Experience Music</div>
+                            <div class="circle"></div>
+                        </div>
+                    </a>                        
+                </footer>
+            </div>
+            
+            <!-- 生日倒计时页面 - 应用毛玻璃效果 -->
+            <div class="section page-when page page-cent" id="s-when">
+                <section class="content">
+                    <div class="clock clock-countdown">
+                        <!-- 倒计时配置 -->
+                        <div class="site-config"
+                             data-date="11/29/2025 00:00:00" 
+                             data-date-timezone="+0"></div>
+                        
+                        <header class="header">
+                            🎂 Countdown to <strong> My</strong> Birthday 🎉
+                        </header>
+                        
+                        <!-- 倒计时显示 -->
+                        <div class="elem-left">
+                            <div class="digit hours">00</div>
+                            <div class="text">Hours</div>
+                        </div>						
+                        <div class="elem-center">
+                            <span class="text top">
+                                <img class="img" alt="AkiroMusic" src="http://q1.qlogo.cn/g?b=qq&nk=1284969540&s=100">
+                            </span>
+                            <div class="digit days">000</div>
+                            <div class="text">Days</div>
+                        </div>
+                        <div class="elem-right">
+                            <div class="digit minutes">00</div>
+                            <div class="text">Minutes</div>
+                        </div>
+                        
+                        <!-- 秒表圆形进度条 -->
+                        <div class="second">
+                            <input class="knob container" 
+                                   id="second-knob"
+                                   data-width="400"
+                                   data-height="400"
+                                   data-displayInput=false
+                                   data-fgColor="#fff"
+                                   data-bgColor="rgba(255,255,255,0)"
+                                   data-thickness=".07"
+                                   value="0"
+                                   data-displayPrevious=true
+                                   data-max="6000" />
+                        </div>
+                    </div>                   
+                    
+                </section>                
+                <footer class="p-footer p-scrolldown">
+                    <a href="#register">
+                        <div class="arrow-d">
+                            <div class="before">Celebrate</div>
+                            <div class="after">With Music</div>
+                            <div class="circle"></div>
+                        </div>
+                    </a>                        
+                </footer>
+            </div>
+            
+            <!-- 平台链接页面 - 应用毛玻璃效果 -->
+            <div class="section page-register page page-cent" id="s-register">
+                <section class="content">
+                    <header class="p-title">
+                        <h3><span style="color:#FFFFFF;">🍭 My Platforms & Links</span></h3>
+                    </header>
+                    <div>
+                        <article class="text">
+                            <!-- 音乐平台 -->
+                            <h4 style="color:#FFD700; margin-bottom: 10px;">🎵 Music Platforms</h4>
+                            <p>
+                                <a href="https://music.163.com/#/artist?id=47966143" target="_blank">
+                                    <span style="color:#FFFFFF;">🍉 NetEase Cloud Music: Official Artist Page</span>
+                                </a>
+                            </p>	
+                            <p>
+                                <a href="https://y.qq.com/n/ryqq/singer/003qWlyY39YXFo" target="_blank">
+                                    <span style="color:#FFFFFF;">🍓 QQ Music: Listen to My Tracks</span>
+                                </a>
+                            </p>	
+                            <p>
+                                <a href="https://soundcloud.com/akirowww" target="_blank">
+                                    <span style="color:#FFFFFF;">🍒 SoundCloud: Releases & Remixes</span>
+                                </a>
+                            </p>
+                            
+                            <!-- 视频平台 -->
+                            <h4 style="color:#FFD700; margin: 20px 0 10px 0;">🎬 Video Platforms</h4>
+                            <p>
+                                <a href="https://www.youtube.com/@AkiroMusic" target="_blank">
+                                    <span style="color:#FFFFFF;">🍋 YouTube: Music Videos</span>
+                                </a>
+                            </p>
+                            <p>
+                                <a href="https://m.bilibili.com/space/412877576" target="_blank">
+                                    <span style="color:#FFFFFF;">🍊 BiliBili: Music Content</span>
+                                </a>
+                            </p>
+                            
+                            <!-- 其他平台 -->
+                            <h4 style="color:#FFD700; margin: 20px 0 10px 0;">💻 Other Platforms</h4>
+                            <p>
+                                <a href="https://github.com/AkiroMusic" target="_blank">
+                                    <span style="color:#FFFFFF;">🍇 GitHub: Code & Projects</span>
+                                </a>
+                            </p>
+                            <p>
+                                <a href="https://discord.com/users/743371092609204294" target="_blank">
+                                    <span style="color:#FFFFFF;">🎮 Discord: Connect & Chat</span>
+                                </a>
+                            </p>
+                            
+                            <!-- 邮件订阅表单 -->
+                            <form id="mail-subscription" class="form magic send_email_form" method="get" action="ajaxserver/serverfile.php">
+                                <p class="invite center">Explore my content across different platforms!</p>
+                            </form>
+                        </article>
+                    </div>
+                </section>
+                <footer class="p-footer p-scrolldown">
+                    <a href="#about-us">
+                        <div class="arrow-d">
+                            <div class="before">Musical</div>
+                            <div class="after">Journey</div>
+                            <div class="circle"></div>
+                        </div>
+                    </a>                        
+                </footer>
+            </div>
+            
+            <!-- 关于我页面 - 应用毛玻璃效果 -->
+            <div class="section page-about page page-cent" id="s-about-us">
+                <section class="content">
+                    <header class="p-title">
+                        <h3>🍬 About AkiroMusic</h3>
+                        <h2>Ready to <span class="bold">Collaborate</span> and <span class="bold">Create Amazing Music</span> Together?</h2>
+                    </header>
+                    <article class="text">
+                        <p>  I'm AkiroMusic, an independent EDM producer specializing in House music. I now focus on refining my sound—leaning into deep, warm, melodic vibes, with bright, upbeat energy and catchy hooks.</p>
+                        <p>  Music is my passion and I'm constantly exploring new sounds and techniques to create unique electronic music experiences that connect with listeners worldwide.</p>
+                    </article>
+
+                    <!-- 对话气泡样式 -->
+                    <div class="sender">
+                        <div>
+                            <!-- 头像已移除 -->
+                        </div>
+                        <div>
+                            <div class="left_triangle"></div>
+                            <span>
+                                <span style="color:#E56600;"> What inspires your music production? </span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="receiver">
+                        <div>
+                            <img src="http://q1.qlogo.cn/g?b=qq&nk=1284969540&s=100">
+                        </div>
+                        <div>
+                            <div class="right_triangle"></div>
+                            <span>
+                                <span style="color:#4C33E5;">
+                                    The energy of the crowd and the 
+                                    <span style="color:#E53333;">power of rhythm</span> 
+                                    to bring people together!
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+
+                </section>
+                <footer class="p-footer p-scrolldown">
+                    <a href="#contact">
+                        <div class="arrow-d">
+                            <div class="before">AkiroMusic</div>
+                            <div class="after">Sound Creator</div>
+                            <div class="circle"></div>
+                        </div>
+                    </a>                        
+                </footer>
+            </div>
+                
+            <!-- 联系我页面 - 应用毛玻璃效果 -->
+            <div class="section page-contact page page-cent" id="s-contact">
+                <section class="content">
+                    <header class="p-title">
+                        <h3>💖 Get in Touch</h3>
+                    </header>
+                    <div class="contact">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <!-- 联系方式列表 -->
+                                <ul class="contact-list">
+                                    <li>
+                                        <i class="ion ion-email"></i>
+                                        <span>Email: akiromusic@outlook.com</span>
+                                    </li>
+                                    <li>
+                                        <i class="ion ion-ios-telephone"></i>
+                                        <span>QQ: 1284969540</span>
+                                    </li>
+                                    <li>
+                                        <i class="ion ion-ios-chatboxes"></i>
+                                        <span>WeChat: AkiroMusic</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <!-- 社交媒体链接 -->
+                                <div class="social-links">
+                                    <p>Connect with me on social media:</p>
+                                    <div class="social-icons">
+                                        <!-- 从右往左排列：YouTube, 网易云, GitHub, Discord, 微信, QQ, 其他 -->
+                                        <a href="https://www.youtube.com/@AkiroMusic" target="_blank" title="YouTube">
+                                            <i class="ion ion-social-youtube"></i>
+                                        </a>
+                                        <a href="https://music.163.com/#/artist?id=47966143" target="_blank" title="NetEase Cloud Music">
+                                            <i class="ion ion-music-note"></i>
+                                        </a>
+                                        <a href="https://github.com/AkiroMusic" target="_blank" title="GitHub">
+                                            <i class="ion ion-social-github"></i>
+                                        </a>
+                                        <a href="https://discord.com/users/743371092609204294" target="_blank" title="Discord">
+                                            <i class="ion ion-chatbubble"></i>
+                                        </a>
+                                        <a href="javascript:void(0);" title="WeChat">
+                                            <i class="ion ion-social-wechat"></i>
+                                        </a>
+                                        <a href="javascript:void(0);" title="QQ">
+                                            <i class="ion ion-chatboxes"></i>
+                                        </a>
+                                        <!-- 其他平台放在最左边 -->
+                                        <a href="mailto:akiromusic@outlook.com" title="Email">
+                                            <i class="ion ion-email"></i>
+                                        </a>
+                                        <a href="https://soundcloud.com/akirowww" target="_blank" title="SoundCloud">
+                                            <i class="ion ion-social-soundcloud"></i>
+                                        </a>
+                                        <a href="https://m.bilibili.com/space/412877576" target="_blank" title="Bilibili">
+                                            <i class="ion ion-social-chrome"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer class="p-footer">
+                    <div class="copyright">
+                        <p>&copy; 2024 AkiroMusic. All rights reserved.</p>
+                    </div>
+                </footer>
+            </div>
+        </main>
+
+        <!-- JavaScript文件引入 -->
+        <script src="./js/jquery-1.11.2.min.js"></script>
+        <script src="./js/all.js"></script>
+        <script src="./js/form_script.js"></script>
+        <script src="./js/vendor/jquery.fullPage.min.js"></script>
+        <script src="./js/vendor/jquery.downCount.js"></script>
+        <script src="./js/vegas/vegas.min.js"></script>
+        <script src="./js/main.js"></script>
+        
+        <!-- CDN备用加载方案 -->
+        <script>
+            window.jQuery || document.write('<script src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"><\/script>');
+        </script>
+    </body>
+</html>
